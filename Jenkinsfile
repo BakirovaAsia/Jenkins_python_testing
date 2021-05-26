@@ -14,6 +14,7 @@ pipeline {
         }
         stage ('Testing') {
             steps {
+                sh 'pytest --version'
                 sh 'cd ./UI_tests && pytest'
             }
         }

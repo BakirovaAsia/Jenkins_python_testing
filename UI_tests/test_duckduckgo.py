@@ -1,9 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-from config import base_url
-
-
 def test_login_admin():
     capabilities = {
         "browserName": "chrome",
