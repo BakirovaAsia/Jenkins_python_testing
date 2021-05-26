@@ -14,11 +14,8 @@ pipeline {
         }
         stage ('Testing') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-                sh 'cd ./Jenkins_python_testing'
-                sh 'pytest'
-             }
+                sh 'cd ./UI_tests && pytest'
+            }
         }
         stage('build') {
             steps {
