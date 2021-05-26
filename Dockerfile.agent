@@ -1,9 +1,5 @@
 FROM python:3.9.5
 
 WORKDIR /home/venv/
-RUN python3 -m venv /home/venv/
-RUN /bin/bash -c "source /home/venv/bin/activate"
+
 RUN pip3 install pytest selenium
-RUN pip3 freeze
-RUN deactivate
-RUN pip3 freeze
