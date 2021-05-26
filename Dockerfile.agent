@@ -1,5 +1,6 @@
 FROM python:3.9.5
 
-WORKDIR /home/venv/
+WORKDIR /usr/src/app
 
-RUN pip3 install pytest selenium
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
