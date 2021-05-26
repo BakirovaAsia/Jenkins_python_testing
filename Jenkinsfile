@@ -14,7 +14,11 @@ pipeline {
         }
         stage ('Testing') {
             steps {
+                sh 'mkdir my_venv'
+                sh 'python3 -m venv ./my_venv'
+                sh 'source ./my_venv/bin/activate'
                 sh 'pytest'
+                sh 'deactivate'
             }
         }
         stage('build') {
