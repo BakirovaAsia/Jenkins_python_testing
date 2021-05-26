@@ -14,6 +14,8 @@ pipeline {
         }
         stage ('Testing') {
             steps {
+                sh 'pwd'
+                sh 'ls -la'
                 sh 'cd ./Jenkins_python_testing'
                 sh 'pytest'
              }
