@@ -14,12 +14,9 @@ pipeline {
         }
         stage ('Testing') {
             steps {
-                sh 'rm -rf my_venv && mkdir my_venv'
-                sh 'python3 -m venv ./my_venv'
-                sh '/bin/bash/ -c "source ./my_venv/bin/activate"'
+                sh 'cd ./Jenkins_python_testing'
                 sh 'pytest'
-                sh 'deactivate'
-            }
+             }
         }
         stage('build') {
             steps {
